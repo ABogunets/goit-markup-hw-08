@@ -1,13 +1,32 @@
 .feature-set {
+    @media screen and (min-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    }
 }
 .feature-set__item {
-    width: 270px;
-}
-.feature-set__item:not(:last-child) {
-    margin-right: 30px;
-}
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: calc($tablet - 1px)) {
+        &:not(:last-child){
+        margin-bottom: 30px;
+        outline: 1px solid blueviolet;
+            }
+            }
+    @media screen and (min-width: $tablet) {
+        width: calc((100% - 2*30px)/2);
+        margin: 15px;
+        outline: 1px solid blue;
+        }
+    @media screen and (min-width: $desktop) {
+        width: calc((100% - 4*30px)/4);
+            }
+    }
 .feature-set__title {
+    @media screen and (max-width: calc($tablet - 1px)) {
+        text-align: center;;
+    }
     margin-top: 0;
     margin-bottom: 10px;
 
