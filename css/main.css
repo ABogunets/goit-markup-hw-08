@@ -601,6 +601,7 @@ img {
 .feature-set__item {
   margin-left: auto;
   margin-right: auto;
+  outline: 1px solid teal;
 }
 @media screen and (max-width: 767px) {
   .feature-set__item:not(:last-child) {
@@ -622,6 +623,7 @@ img {
 }
 
 .feature-set__title {
+  text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
   color: var(--secondary-text-color);
@@ -631,9 +633,9 @@ img {
   font-weight: 700;
   text-transform: uppercase;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .feature-set__title {
-    text-align: center;
+    text-align: left;
   }
 }
 
