@@ -6,12 +6,8 @@
         display: flex;
         flex-wrap: wrap;
         margin: -15px;
-            }
-    // display: flex;
 }
-// .team-set__item:not(:last-child) {
-//     margin-right: 30px;
-// }
+}
 .team-set__item {
     margin-left: auto;
     margin-right: auto;
@@ -22,13 +18,11 @@
         outline: 1px solid blueviolet;
             }
         }
-        
     @media screen and (min-width: $tablet) {
         width: calc((100% - 2*30px)/2);
         margin: 15px;
         outline: 1px solid blue;
             }
-        
     @media screen and (min-width: $desktop) {
                 width: calc((100% - 4*30px)/4);
             }
