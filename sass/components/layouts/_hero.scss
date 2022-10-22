@@ -9,16 +9,22 @@
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    width: 696px;
-
+    width: 360px;
+    
     color: var(--primary-bkgd-color);
 
-    @include font (44px, 1.4, 0.06em, 900);
+    @include font (26px, 1.62, 0.06em, 900);
+    @media screen and (min-width: $desktop) {
+        @include font (44px, 1.4, 0.06em, 900);
+        width: 696px;
+    }
     text-transform: uppercase;
 }
 .hero__button {
+    padding: 10px 24px;
+    @media screen and (min-width: $desktop) {
     padding: 10px 32px;
-    min-width: 216px;
+    }
 }
 .hero--overlay {
     max-width: 1600px;

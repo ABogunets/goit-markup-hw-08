@@ -83,7 +83,7 @@ img {
     display: flex;
     width: 20px;
     height: 20px;
-    fill: var(--icon-color);
+    fill: var(--primary-bkgd-color);
 }
 .social-media__link {
     @extend %flex-center;
@@ -98,13 +98,6 @@ img {
     &:hover,
     &:focus {
         background-color: var(--accent-text-color);
-    }
-
-    &:hover svg {
-        fill: var(--primary-bkgd-color);
-    }
-    &:focus svg {
-        fill: var(--primary-bkgd-color);
     }
 }
 .social-media__link svg {
