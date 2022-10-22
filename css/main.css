@@ -613,20 +613,6 @@ img {
 .contact-nav__phone:focus {
   color: var(--accent-text-color);
 }
-@media screen and (min-width: 768px) {
-  .site-nav__link:after,
-.contact-nav__email:after,
-.contact-nav__phone:after {
-    content: " ";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-text-color);
-  }
-}
 
 @media screen and (min-width: 768px) {
   .site-nav__link {
@@ -642,6 +628,18 @@ img {
 .site-nav__link--active {
   position: relative;
   color: var(--accent-text-color);
+}
+@media screen and (min-width: 768px) {
+  .site-nav__link--active:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-text-color);
+  }
 }
 
 @media screen and (max-width: 767px) {
