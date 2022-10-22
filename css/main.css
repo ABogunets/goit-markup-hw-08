@@ -315,6 +315,10 @@ body {
   font-weight: 400;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
 }
@@ -1306,6 +1310,7 @@ img {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
   opacity: 1;
   -webkit-transition: opacity var(--modal-duration) var(--timing-function);
   transition: opacity var(--modal-duration) var(--timing-function);
@@ -1327,8 +1332,8 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1339,6 +1344,12 @@ img {
   transition: -webkit-transform var(--modal-duration) var(--timing-function);
   transition: transform var(--modal-duration) var(--timing-function);
   transition: transform var(--modal-duration) var(--timing-function), -webkit-transform var(--modal-duration) var(--timing-function);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__close-button {
@@ -1374,11 +1385,19 @@ img {
   margin: 0;
   margin-bottom: 12px;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   font-weight: 700;
   text-align: center;
   color: var(--secondary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .modalform__title {
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+  }
 }
 
 .modalform__field {
@@ -1450,18 +1469,70 @@ img {
 }
 .modalform__input--comment::-webkit-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  font-weight: 400;
 }
 .modalform__input--comment::-moz-placeholder {
   color: rgba(117, 117, 117, 0.5);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  font-weight: 400;
 }
 .modalform__input--comment:-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  font-weight: 400;
 }
 .modalform__input--comment::-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  font-weight: 400;
 }
 .modalform__input--comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+@media screen and (min-width: 1200px) {
+  .modalform__input--comment::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+  }
+  .modalform__input--comment::-moz-placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+  }
+  .modalform__input--comment:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+  }
+  .modalform__input--comment::-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+  }
+  .modalform__input--comment::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+  }
 }
 
 .checkbox {
@@ -1475,8 +1546,18 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
+  font-weight: 400;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__label {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+  }
 }
 
 .checkbox__icon {
@@ -1512,10 +1593,15 @@ img {
   content: " ";
   position: absolute;
   left: 0;
-  bottom: 5px;
+  bottom: 0;
   width: 100%;
   height: 1px;
   background-color: var(--accent-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__link::after {
+    bottom: 5px;
+  }
 }
 
 .modalform__button {

@@ -7,6 +7,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
 
     opacity: 1;
     transition: opacity var(--modal-duration) var(--timing-function);
@@ -25,8 +26,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+    width: 450px;
+    height: 609px;
+    @media screen and (min-width: $desktop) {
     width: 528px;
     height: 581px;
+    }
 
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -73,8 +78,12 @@
     margin: 0;
     margin-bottom: 12px;
 
-    @include font (20px, 1.15, 0.03em, 700);
+    @include font (20px, 1.5, 0.03em, 700);
     text-align: center;
+
+    @media screen and (min-width: $desktop) {
+    @include font (20px, 1.15, 0.03em, 700);
+    }
 
     color: var(--secondary-text-color);
 }
@@ -134,9 +143,12 @@
 
     &::placeholder {
         color: rgba(117, 117, 117, 0.5);
+        @include font (14px, 1.14, 0.01em, 400);
+        @media screen and (min-width: $desktop) {
+            @include font (12px, 1.17, 0.01em, 400);
         }
+    }
 }
-
 //form-checkbox
 .checkbox {
     @extend %flex-center;
@@ -146,8 +158,12 @@
 .checkbox__label {
     display: flex;
     align-items: center;
-    font-size: 14px;
-    letter-spacing: 0.03em;
+
+    @include font (12px, 1.16, 0.03em, 400);
+    
+    @media screen and (min-width: $desktop) {
+        @include font (14px, 1.71, 0.03em, 400);
+    }
 }
 
 .checkbox__icon {
@@ -184,7 +200,10 @@
         content: ' ';
         position: absolute;
         left: 0;
+        bottom:0;
+        @media screen and (min-width: $desktop) {
         bottom: 5px;
+        }
         width: 100%;
         height: 1px;
         background-color: var(--accent-text-color);

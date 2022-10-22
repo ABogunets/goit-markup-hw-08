@@ -6,6 +6,9 @@ body {
     @include font (14px, 1.7);
 
 }
+body.modal-open {
+    overflow: hidden;
+}
 img {
     display: block;
 }
