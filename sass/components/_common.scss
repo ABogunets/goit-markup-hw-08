@@ -11,6 +11,8 @@ body.modal-open {
 }
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 .list {
     list-style: none;
@@ -86,7 +88,7 @@ img {
     display: flex;
     width: 20px;
     height: 20px;
-    fill: var(--primary-bkgd-color);
+    fill: var(--icon-color);
 }
 .social-media__link {
     @extend %flex-center;
@@ -101,6 +103,10 @@ img {
     &:hover,
     &:focus {
         background-color: var(--accent-text-color);
+    }
+    &:hover svg,
+    &:focus svg {
+    fill: var(--primary-bkgd-color);
     }
 }
 .social-media__link svg {
