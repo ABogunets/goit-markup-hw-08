@@ -499,13 +499,14 @@
               required
             />
             <label class="checkbox__label" for="checkbox">
-              <span class="checkbox__icon">
-                <svg width="16" height="15">
-                  <use href="./images/icons.svg#icon-checked"></use>
-                </svg>
-              </span>
-              Погоджуюся з розсилкою та приймаю
-              <a href="" class="checkbox__link"> Умови договору</a>
+              <svg width="16" height="15" class="checkbox__icons">
+                <use href="./images/icons.svg#icon-unchecked" class="icon__unchecked"></use>
+                <use href="./images/icons.svg#icon-checked2" class="icon__checked"></use>
+              </svg>
+              <p class="checkbox__text">
+                Погоджуюся з розсилкою та приймаю
+                <a href="./" class="checkbox__link">Умови договору</a>
+              </p>
             </label>
           </div>
           <button type="submit" class="button modalform__button">Відправити</button>
