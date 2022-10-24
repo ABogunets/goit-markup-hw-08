@@ -49,18 +49,15 @@
     @media screen and (max-width: calc($tablet - 1px)) {
         &:not(:last-child) {
         margin-bottom: 30px;
-        outline: 1px solid blueviolet;
         }
     }
     @media screen and (min-width: $tablet) {
         width: calc((100% - 2*30px)/2);
         margin: 15px;
-        outline: 1px solid green;
         }
     
         @media screen and (min-width: $desktop) {
             width: calc((100% - 3*30px)/3);
-            outline: 1px solid yellow;
         }
 }
 .card {

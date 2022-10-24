@@ -28,15 +28,12 @@ img {
 
     @media screen and (min-width: $mobile) {
         width: $mobile;
-        // outline: 1px solid orange;
-    }
+       }
     @media screen and (min-width: $tablet) {
         width: $tablet;
-        // outline: 1px solid yellowgreen;
     }
     @media screen and (min-width: $desktop) {
         width: $desktop;
-        // outline: 1px solid aquamarine;
     }
 }
 .section {

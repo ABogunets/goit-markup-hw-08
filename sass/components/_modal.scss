@@ -25,12 +25,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 90%;
 
+    @media screen and (min-width: $mobile) and (max-width: $desktop) {
     width: 450px;
-    height: 609px;
+    }
     @media screen and (min-width: $desktop) {
     width: 528px;
-    height: 581px;
     }
 
     background-color: #FFFFFF;
