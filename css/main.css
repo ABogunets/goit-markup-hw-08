@@ -730,9 +730,6 @@ img {
   }
 }
 
-.contact-nav__phone {
-  color: var(--accent-text-color);
-}
 @media screen and (max-width: 376px) {
   .contact-nav__phone {
     font-size: 26px;
@@ -1367,12 +1364,13 @@ img {
   background: rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
   opacity: 1;
-  -webkit-transition: opacity var(--modal-duration) var(--timing-function);
-  transition: opacity var(--modal-duration) var(--timing-function);
+  -webkit-transition: opacity var(--modal-duration) var(--timing-function), visibility var(--modal-duration) var(--timing-function);
+  transition: opacity var(--modal-duration) var(--timing-function), visibility var(--modal-duration) var(--timing-function);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -1640,10 +1638,14 @@ img {
 
 .icon__unchecked {
   opacity: 1;
+  -webkit-transition: opacity var(--duration) var(--timing-function);
+  transition: opacity var(--duration) var(--timing-function);
 }
 
 .icon__checked {
   opacity: 0;
+  -webkit-transition: opacity var(--duration) var(--timing-function);
+  transition: opacity var(--duration) var(--timing-function);
 }
 
 .checkbox__input:checked + .checkbox__label .icon__checked {
@@ -1763,7 +1765,14 @@ img {
 }
 
 .card {
-  display: block;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition: -webkit-box-shadow var(--duration) var(--timing-function);
   transition: -webkit-box-shadow var(--duration) var(--timing-function);
   transition: box-shadow var(--duration) var(--timing-function);
@@ -1795,6 +1804,9 @@ img {
 }
 
 .card__meta {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid var(--portfolio-bkgd-color);
   border-bottom: 1px solid var(--portfolio-bkgd-color);
@@ -1817,7 +1829,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  padding: 0px 24px;
+  padding: 24px;
   background: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -1830,10 +1842,18 @@ img {
 .card-overlay__text {
   margin: 0;
   color: var(--primary-bkgd-color);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.55;
   letter-spacing: 0.03em;
   font-weight: 400;
+}
+@media screen and (min-width: 350px) {
+  .card-overlay__text {
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+  }
 }
 
 .card:hover .card-overlay {

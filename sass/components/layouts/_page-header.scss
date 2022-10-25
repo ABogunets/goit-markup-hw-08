@@ -194,7 +194,6 @@
     }
 }
 .contact-nav__phone {
-    color: var(--accent-text-color);
     @media screen and (max-width: 376px) {
         @include font (26px, 1.17, 0.02em, 500);
     }
